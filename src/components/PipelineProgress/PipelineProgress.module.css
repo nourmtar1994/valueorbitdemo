@@ -1,0 +1,20 @@
+.closeIcon {
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  width: 27px;
+  height: 27px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  color: #00417ea8;
+}

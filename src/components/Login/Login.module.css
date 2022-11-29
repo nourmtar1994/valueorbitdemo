@@ -1,0 +1,162 @@
+@media only screen and (max-width: 768px) {
+  .formContainer {
+    width: auto !important;
+  }
+}
+/* .container .box .row {
+    padding: 20px 10% !important;
+  } */
+
+.salesforcebtn {
+  transition: 0.3s;
+  width: 100%;
+  height: 46px;
+  background: #fff;
+  color: #00a1e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #00a0e079;
+  margin-bottom: 10px;
+}
+.salesforcebtn:hover {
+  width: 100%;
+  height: 46px;
+  background: #00a1e0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hubspotbtn {
+  transition: 0.3s;
+  width: 100%;
+  height: 46px;
+  background: #fff;
+  color: #ff5c35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #ff5d357b;
+}
+.hubspotbtn:hover {
+  width: 100%;
+  height: 46px;
+  background: #ff5c35;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1020%26quot%3b)' fill='none'%3e%3cpath d='M1450.467%2c428.292C1482.46%2c428.601%2c1518.275%2c426.868%2c1535.377%2c399.829C1553.311%2c371.474%2c1544.988%2c334.969%2c1527.667%2c306.235C1510.972%2c278.538%2c1482.802%2c259.539%2c1450.467%2c258.966C1417.122%2c258.375%2c1385.321%2c274.686%2c1368.38%2c303.413C1351.175%2c332.589%2c1349.743%2c369.914%2c1368.348%2c398.218C1385.51%2c424.326%2c1419.224%2c427.991%2c1450.467%2c428.292' fill='rgba(38%2c 198%2c 218%2c 0.56)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M649.762%2c197.616C683.891%2c197.416%2c707.426%2c167.971%2c724.951%2c138.684C743.139%2c108.289%2c759.013%2c73.012%2c743.324%2c41.255C726.168%2c6.529%2c688.495%2c-13.613%2c649.762%2c-13.514C611.196%2c-13.416%2c574.304%2c7.253%2c557.023%2c41.731C541.151%2c73.397%2c554.921%2c109.133%2c573.031%2c139.574C590.605%2c169.115%2c615.39%2c197.817%2c649.762%2c197.616' fill='rgba(38%2c 198%2c 218%2c 0.56)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M289.262%2c741.489C341.186%2c741.905%2c390.649%2c714.73%2c415.231%2c668.991C438.683%2c625.356%2c427.851%2c573.444%2c402.43%2c530.926C377.777%2c489.693%2c337.301%2c457.812%2c289.262%2c458.297C241.938%2c458.775%2c203.948%2c492.36%2c179.988%2c533.173C155.664%2c574.607%2c144.422%2c624.454%2c166.741%2c667.001C190.537%2c712.365%2c238.037%2c741.079%2c289.262%2c741.489' fill='rgba(38%2c 198%2c 218%2c 0.56)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M348.733%2c312.693C403.739%2c313.134%2c449.585%2c275.058%2c476.833%2c227.273C503.797%2c179.987%2c512.448%2c121.633%2c484.22%2c75.09C456.839%2c29.944%2c401.531%2c15.551%2c348.733%2c16.059C297.002%2c16.556%2c244.157%2c33.206%2c217.684%2c77.653C190.675%2c123%2c198.437%2c179.148%2c224.14%2c225.248C250.623%2c272.746%2c294.353%2c312.257%2c348.733%2c312.693' fill='rgba(38%2c 198%2c 218%2c 0.56)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M42.051%2c150.065C81.208%2c149.525%2c118.788%2c134.356%2c140.423%2c101.714C164.666%2c65.136%2c175.872%2c18.311%2c154.936%2c-20.256C133.206%2c-60.285%2c87.466%2c-82.962%2c42.051%2c-79.502C1.379%2c-76.403%2c-24.563%2c-40.637%2c-44.515%2c-5.06C-63.879%2c29.469%2c-80.43%2c69.926%2c-61.139%2c104.496C-41.5%2c139.688%2c1.754%2c150.621%2c42.051%2c150.065' fill='rgba(38%2c 198%2c 218%2c 0.56)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M901.079%2c390.31C923.523%2c389.714%2c941.628%2c373.668%2c952.313%2c353.921C962.439%2c335.207%2c964.15%2c312.486%2c952.994%2c294.367C942.307%2c277.01%2c921.456%2c270.203%2c901.079%2c270.708C881.674%2c271.189%2c864.05%2c280.581%2c853.44%2c296.836C841.618%2c314.948%2c835.084%2c337.501%2c844.905%2c356.772C855.519%2c377.597%2c877.713%2c390.93%2c901.079%2c390.31' fill='rgba(38%2c 198%2c 218%2c 0.56)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1020'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e"); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  height: 100vh;
+  justify-items: center;
+}
+.logoContainer {
+  border-top: 1px solid rgb(200, 200, 200);
+  background: #ffffff;
+  border-radius: 60px;
+  width: 100px;
+  height: 100px;
+  top: -53px;
+  left: 142px;
+  padding: 10px;
+  margin-top: -71px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formContainer {
+  border-radius: 5px;
+  border: 1px solid rgb(216, 221, 230);
+  padding: 20px;
+  background-color: #fff;
+  width: 350px;
+  margin: auto;
+  margin-top: -10px;
+  display: block;
+  position: relative;
+}
+
+.container .box {
+  height: 100vh;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.container .box .row {
+  padding: 14vh 5%;
+}
+
+.container .box .loginBox {
+  width: 100%;
+  text-align: left;
+  background: #f0f2f5;
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='462' height='619' preserveAspectRatio='none' viewBox='0 0 462 619'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1326%26quot%3b)' fill='none'%3e%3cpath d='M102.18 623.8C196.8 566.85 153.35 298.31 318.13 238.44 482.92 178.57 466.47 80.69 534.09 71.31' stroke='rgba(38%2c 198%2c 218%2c 0.48)' stroke-width='2'%3e%3c/path%3e%3cpath d='M151.88 731.73C230.75 652.32 209.93 326.46 308.51 312.35 407.1 298.24 408.95 469.79 465.15 485.67' stroke='rgba(38%2c 198%2c 218%2c 0.48)' stroke-width='2'%3e%3c/path%3e%3cpath d='M232.83 725.78C307.14 649.75 296.58 331.62 379.84 326.75 463.1 321.88 464.55 534.82 526.85 568.16' stroke='rgba(38%2c 198%2c 218%2c 0.48)' stroke-width='2'%3e%3c/path%3e%3cpath d='M168.89 722.45C237.05 691.79 195.06 551.17 337.67 475.72 480.28 400.27 432.3 217.48 506.45 172.41' stroke='rgba(38%2c 198%2c 218%2c 0.48)' stroke-width='2'%3e%3c/path%3e%3cpath d='M227 689.43C269.73 659.38 202.38 564.27 320.35 502.49 438.32 440.71 432.45 268.6 507.05 236.32' stroke='rgba(38%2c 198%2c 218%2c 0.48)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1326'%3e%3crect width='462' height='619' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e"); */
+}
+.container .banner {
+  overflow: hidden;
+  background-image: url("../../assets/images/stacked-waves-haikei.svg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container .banner .logo {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+}
+.container .banner .logo label {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.container .banner .bannerImage {
+  background-color: #fff;
+  background-image: url("../../assets/images/imageDach.png");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center/100%;
+  width: 70%;
+  height: 300px;
+  position: absolute;
+  left: 40%;
+  top: 65%;
+  border-radius: 10px;
+}
+
+.roundedBorder {
+  border-radius: 20px;
+}

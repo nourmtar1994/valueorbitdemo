@@ -1,0 +1,21 @@
+.signalsIcon {
+  font-size: 1em;
+  margin: 0 3px;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.signalsIcon:hover {
+  filter: brightness(0.3);
+}
+.signalsIcon.secondary {
+  color: #aaaaaa;
+}
+.signalsIcon.primary {
+  color: #00417ea8;
+}
+
+.signalsIcon.danger {
+  color: red;
+}

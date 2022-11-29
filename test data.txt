@@ -1,0 +1,39 @@
+*********forecast healthcheck**
+{
+    "target": 10,
+    "rep_commit": 80,
+    "hard_commit": 85,
+    "closed": 6,
+    "gap_coverage": 25,
+    "best_case": 60,
+    "ai_forecast": 7,
+    "ai_best_case": 95
+}
+************stages*************
+{
+  "stage": "stage 1"
+}
+**********signals**************
+{
+"signals" : ["signal 1" , "signal 2" , "signal 3"]
+}
+*********next best actions *********
+{
+    "action": "action 1",
+    "confidence": 122,
+    "win_rate": "30",
+    "explanation": "explanation name",
+    "source": "source ",
+    "priority": 12,
+    "status": 1
+}
+****************Deal progress******************
+{
+    "qualifications": "qualifications",
+    "velocity": 10,
+    "deal_risk": 12,
+    "progress": true,
+    "last_modified": "modified"
+}
+**********************************
+**********************************

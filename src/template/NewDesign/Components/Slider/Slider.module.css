@@ -1,0 +1,73 @@
+.sliderContainer {
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.sliderContainer::-webkit-scrollbar:horizontal {
+  height: 10px !important;
+
+  direction: ltr;
+  width: 5px;
+}
+/* Track */
+.sliderContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+.sliderContainer::-webkit-scrollbar-thumb:horizontal {
+  transition: 0.3s;
+  background: transparent;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.sliderContainer:hover::-webkit-scrollbar-thumb {
+  transition: 0.3s;
+  background: rgba(126, 126, 126, 0.2);
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.scrollArrowRight {
+  cursor: pointer;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  position: absolute;
+
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+.scrollArrowLeft {
+  cursor: pointer;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  position: absolute;
+
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

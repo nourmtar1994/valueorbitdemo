@@ -1,0 +1,98 @@
+.card {
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  min-height: 100px;
+  padding: 1rem;
+  max-height: 100px;
+}
+.card-body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+}
+
+.card-body .media-body {
+  width: fit-content;
+  max-width: 70%;
+}
+.card-body .media-body h3 {
+  margin-bottom: 0.5rem;
+  font-family: Montserrat, Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 0px !important;
+  margin-left: -2px;
+}
+.badge {
+  position: absolute;
+  right: 10px;
+  font-size: 1.7em;
+  top: calc(50% - 22.5px);
+  color: #526079;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  border-radius: 25px;
+  justify-content: center;
+}
+.badge-secondary .badge {
+  background-color: #52607917;
+  color: #526079;
+}
+.badge-secondary .card-body .media-body h3 {
+  color: #526079;
+}
+.badge-primary .badge {
+  background-color: #00417e17;
+  color: #00417e;
+}
+.badge-primary .card-body .media-body h3 {
+  color: #00417e;
+}
+.badge-success .badge {
+  background-color: #52c41a17;
+  color: #52c41a;
+}
+.badge-success .card-body .media-body h3 {
+  color: #52c41a;
+}
+.badge-danger .badge {
+  background-color: #e9263017;
+  color: #e92630;
+}
+.badge-danger .card-body .media-body h3 {
+  color: #e92630;
+}
+
+.badge-warning .badge {
+  color: #fb8c00;
+  background-color: #fb8c0017;
+}
+.badge-warning .card-body .media-body h3 {
+  color: #fb8c00;
+}
+.badge-info .badge {
+  color: #2691fd;
+  background-color: #2691fd17;
+}
+.badge-info .card-body .media-body h3 {
+  color: #2691fd;
+}
+.card-body .media-body .title {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 600;
+  font-size: 12px !important;
+  text-transform: uppercase;
+}
+.card-body .media-body label {
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 600;
+  font-size: 11px !important;
+  text-transform: capitalize;
+}

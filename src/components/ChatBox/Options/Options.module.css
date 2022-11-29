@@ -1,0 +1,7 @@
+.optionContainer {
+  width: 250px;
+}
+
+.ant-popover-inner-content {
+  padding: 6px 0px !important;
+}

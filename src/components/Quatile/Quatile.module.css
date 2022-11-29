@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  margin: 0 !important;
+  background: #fff;
+  /* border-radius: 5px; */
+  row-gap: 0px !important;
+  display: flex;
+  padding-top: 20px;
+}
+.filterSpace .description {
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  font-weight: bold;
+  color: #00417e;
+
+  /* color: rgb(147 147 147); */
+  padding: 1px 5px;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.filterSpace .actionsbutton {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -14px;
+  right: 10px;
+}
+.filterSpace {
+  grid-gap: 10px;
+  gap: 10px;
+  width: 100%;
+  display: inline-flex;
+  padding: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  /* border-top: 2px solid #0e5291; */
+  margin-bottom: 15px;
+  margin-top: 5px;
+}

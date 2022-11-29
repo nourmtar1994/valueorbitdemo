@@ -1,0 +1,76 @@
+.filterStatusContainer {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: fit-content;
+  max-width: 200px;
+  height: fit-content;
+  background: transparent;
+}
+.filterStatusContainer .icon {
+  opacity: 0.8;
+  position: absolute;
+  bottom: -60px;
+  cursor: pointer;
+  right: -25px;
+  padding: 8px;
+  transition: 0.5s;
+}
+.filterStatusContainer .icon:hover {
+  opacity: 0.9;
+}
+.filterStatusContainer .filterlList {
+  border: 1px solid rgba(75, 73, 73, 0.1);
+  border-radius: 10px;
+  transition: 0.5s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 20px 50px 20px;
+  color: black;
+  overflow: hidden;
+  z-index: 8888;
+  min-width: 200px;
+  min-height: 170px;
+}
+.filterStatusContainer .hide {
+  opacity: 0;
+  transform: perspective(0px);
+}
+.filterStatusContainer .show {
+  opacity: 1;
+  transform: perspective(6.5cm);
+}
+
+.filterStatusContainer .filterlList .filterItem {
+  margin: 3px !important;
+}
+
+.actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  height: 30px;
+}
+
+.actions .actionIcon {
+  text-align: center;
+  padding: 5px;
+  width: 50%;
+  cursor: pointer;
+}
+.actions .actionIcon.danger {
+  background: linear-gradient(60deg, #ef5350, #e53935);
+  color: #fff;
+  font-weight: bold;
+}
+.actions .actionIcon.primary {
+  background: linear-gradient(60deg, #26c6da, #00acc1);
+  color: #fff;
+  font-weight: bold;
+}

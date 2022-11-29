@@ -1,0 +1,13 @@
+.titleContainer .title {
+  margin-left: 5px;
+}
+.description {
+  display: block;
+}
+.subTable {
+  margin: 5px;
+  /* border-top: none !important; */
+  border-left: 3px solid rgba(10, 66, 124);
+  /* border-radius: 0 0 3px 3px; */
+  background: rgb(42 146 252 / 10%);
+}

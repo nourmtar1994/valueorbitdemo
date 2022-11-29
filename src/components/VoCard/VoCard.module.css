@@ -1,0 +1,153 @@
+.voCard {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+.voCard .ant-card-body {
+  background-color: #00417e !important;
+}
+.voCard .container {
+  max-height: 440px;
+  overflow-y: auto;
+  position: relative;
+}
+.voCard .options {
+  border-radius: 5px;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  opacity: 0;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.voCardItemContainer:hover .options {
+  opacity: 1;
+  z-index: 1;
+}
+.voCard .header {
+  width: 101%;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.voCard .header .title {
+  color: #535353;
+  font-size: 16px;
+  width: 70%;
+  text-align: left;
+}
+.voCard .header .extra {
+  font-size: 13px;
+  width: 30%;
+  text-align: right;
+}
+.voCard .itemHeader {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.voCard .itemHeader .title {
+  color: #535353;
+  font-size: 14px;
+  width: fit-content;
+  text-align: left;
+}
+.voCard .itemHeader .extra {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  color: silver;
+}
+
+.voCard .voCardItem {
+  background-color: #f0f2f5;
+  border-left: 2px solid transparent;
+  width: 100%;
+  transition: 0.3s;
+  box-shadow: 0 1px 2px 0 rgba(9, 30, 66, 0.25);
+}
+
+.voCard .voCardItem:hover {
+  background-color: #e8e8e8;
+}
+
+.ant-card-head-title {
+  padding: 0;
+}
+.voCard .actionsHeader {
+  width: 100%;
+  margin: 5px 0;
+  height: 35px;
+  display: flex;
+}
+.voCard .actionsHeader div {
+  width: 100%;
+}
+
+.voCard .header {
+  color: rgb(70, 70, 70);
+  background: #f0f2f5;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.voCard .header:hover {
+  background: #d8dadc;
+}
+
+.voCard .collapseIcon {
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 7px;
+  background-color: #ffffff;
+  font-weight: bolder !important;
+  color: rgb(70, 70, 70);
+  transition: 0.3s;
+}
+
+.voCard .collapseIcon:hover {
+  background-color: #e3e3e3;
+}
+.voCard .container .voCardItem .footerInfo {
+  font-size: 11px;
+  font-weight: 600;
+  color: #00000073;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+}
+
+.voCard .container .description {
+  width: fit-content;
+  color: rgba(0, 0, 0, 0.86);
+}
+.voCard .container .description .descriptionLink {
+  width: fit-content;
+
+  cursor: pointer;
+}
+.voCard .container .description .descriptionLink:hover {
+  text-decoration: underline;
+}
+.voCard .container .description .descriptionLink .descriptionLinkIcon {
+  text-decoration: underline;
+  opacity: 0;
+  transition: 0.3s;
+  margin-left: 5px;
+  color: grey;
+}
+.voCard .container .description .descriptionLink:hover .descriptionLinkIcon {
+  opacity: 1;
+}
+
+.selected {
+  border-left: 2px solid #00417e !important;
+}

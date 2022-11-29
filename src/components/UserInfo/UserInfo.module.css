@@ -1,0 +1,39 @@
+/* .notificationSpace .anticon {
+  font-weight: bold;
+  font-size: 20px !important;
+  color: #999;
+} */
+.notificationIcon {
+  font-weight: bold;
+  font-size: 1.3em !important;
+  color: #fff !important;
+  transition: 0.3s !important;
+}
+.notificationIcon:hover {
+  color: rgba(255, 255, 255, 0.804) !important;
+}
+.button {
+  background-color: rgba(184, 184, 184, 0.386);
+  border: none !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 1.5em;
+}
+.user_space {
+  width: 60px;
+  border-radius: 100px;
+  transition: 0.3s;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.user_space:hover {
+  background-color: #27272720;
+}
+
+.UserInfo {
+  text-transform: capitalize;
+}

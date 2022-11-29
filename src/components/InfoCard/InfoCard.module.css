@@ -1,0 +1,77 @@
+.o_card {
+  border: 1px solid #f0f0f0;
+  width: 100%;
+  min-height: 108px;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.o_card:hover {
+  border: 1px solid #b4c9de;
+}
+
+.o_card :global(.card_header) {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.o_card :global(.card_header h1) {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #00417e !important;
+}
+.o_card :global(.card_header h3) {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #00417e !important;
+}
+
+.o_card :global(.card_header .icon) {
+  position: absolute;
+  display: block;
+  right: 30px;
+  top: -15px;
+  transform: translateX(50px);
+}
+
+.o_card :global(.card_header .icon) {
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 1.3em;
+  padding: 5px;
+  border-radius: 28%;
+  background-color: #ffffff;
+  color: rgb(0 65 126);
+  transition: 0.3s;
+  border-bottom: 3px solid rgb(0 65 126);
+  box-shadow: 0px 0px 1px -5px black;
+}
+.o_card:hover :global(.card_header .icon) {
+  transition: 0.3s;
+
+  background-color: rgb(0 65 126);
+  color: #ffffff;
+  /* transform: rotate3d(100, 100, 100, 360deg); */
+}
+
+.o_card :global(.o_card_footer) {
+  width: 100%;
+  text-align: center;
+}
+
+.o_card :global(.o_card_footer hr) {
+  border-color: #c0c0c03b;
+}

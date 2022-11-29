@@ -1,0 +1,101 @@
+.selectedCategory {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 5px;
+  transition: 0.3;
+  min-height: 100px;
+  position: relative;
+  transition: 0.3s;
+}
+.light {
+  background-color: rgb(240 242 245);
+  border: 2px solid #f0f0f0;
+  color: rgb(29, 29, 29);
+}
+
+.dark {
+  background-color: #00417e;
+  border: 2px solid #f0f0f0;
+  color: rgb(255, 255, 255);
+}
+
+.selectedCategory .extra {
+  position: relative;
+  width: 100%;
+}
+.selectedCategory .extra .closeBtn {
+  position: absolute;
+  right: 5px;
+
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 7px;
+  background-color: #ffffff;
+  font-weight: bolder !important;
+  color: rgb(70, 70, 70);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.selectedCategory .extra .closeBtn:hover {
+  background-color: #5f5f5f;
+}
+
+.icon {
+  border-radius: 50%;
+  font-size: 1.3em;
+  transition: 0.3s;
+  cursor: help;
+  color: #4e4e4ea0;
+  width: 28px;
+  height: 28px;
+}
+
+.icon_danger {
+  color: #ff0500;
+}
+
+.icon_warning {
+  color: #fb8c00;
+}
+.icon_success {
+  color: #43a047;
+}
+
+.icon_primary {
+  color: #00417e;
+}
+
+.icon_secondary {
+  color: rgb(65, 65, 65);
+}
+
+.selectedCategory .mentionsInput textarea::placeholder {
+  color: rgb(145, 145, 145) !important;
+}
+.selectedCategory .mentionsInput {
+  transition: 0.3s !important;
+  border-radius: 5px;
+  width: 100%;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.selectedCategory.light .mentionsInput textarea {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: rgb(70, 70, 70);
+  border: none !important;
+  min-height: 50px;
+  height: 100%;
+  outline: none !important;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.selectedCategory.dark .mentionsInput textarea {
+  background: #023260 !important;
+  color: white;
+  border: none !important;
+}

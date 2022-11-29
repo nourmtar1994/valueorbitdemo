@@ -1,0 +1,91 @@
+.panel_playbook {
+  border-bottom: 1px solid #d9d9d9;
+  border-left: 2px solid;
+  margin-bottom: 5px;
+}
+.panel_playbook:hover .extra_playbook,
+.panel_category:hover .extra_category {
+  opacity: 1;
+}
+
+.panel_playbook .extra_playbook,
+.panel_category .extra_category {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.extra_menu {
+  display: grid;
+  background-color: rgb(255, 255, 255);
+  min-width: 120px;
+  padding: 7px 0;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.menu_item {
+  transition: 0.3s;
+  padding: 7px;
+  cursor: pointer;
+}
+.menu_item span {
+  margin-right: 5px;
+}
+.menu_item:hover {
+  background-color: rgba(0, 0, 0, 0.058);
+}
+.extra_icon {
+  color: black !important;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.panel_category .btn_question_show {
+  opacity: 0.4;
+  transition: 0.3s;
+  background: #00000000;
+  width: 100%;
+  margin: auto;
+  padding: 5px 0;
+}
+.panel_category :hover .btn_question_show {
+  opacity: 1;
+}
+
+.highlighter {
+  /* background-color: rgba(0, 255, 255, 0.323); */
+}
+
+.items_space {
+  position: relative;
+  display: flex;
+  /* background: #4cd9e629; */
+  padding: 5px;
+  margin: 3px;
+  border-bottom: 1px solid #4cd9e64d;
+  transition: 0.3s;
+}
+
+.items_space:hover {
+  background: #00000009;
+}
+.items_space:hover {
+  background: #00000009;
+}
+
+.items_space p {
+  width: fit-content;
+  max-width: 88%;
+  text-align: left;
+  margin: 0;
+}
+.items_space .items_actions {
+  position: absolute;
+  right: 10px;
+  width: fit-content;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.items_space:hover .items_actions {
+  opacity: 1;
+}

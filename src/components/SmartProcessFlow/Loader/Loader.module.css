@@ -1,0 +1,20 @@
+.loadingContainer {
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  height: calc(100% + 1px);
+  width: calc(100% + 1px);
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  color: #00417e;
+}
+
+.loadingContainer .loadingIcon {
+  font-size: 2em;
+  display: block;
+  color: #00417e;
+}

@@ -1,0 +1,113 @@
+/* .TimeLine {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 1;
+  background-color: aquamarine;
+} */
+.TimeLine {
+  cursor: pointer;
+}
+.timelineItem:first-child {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.timelineItem:last-child {
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.arrowContainer {
+  height: 54px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+}
+.arrowContainer::-webkit-scrollbar {
+  direction: ltr;
+  width: 5px;
+  height: 5px;
+}
+/* Track */
+.arrowContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+.arrowContainer::-webkit-scrollbar-thumb {
+  background: #7d7d7d8e;
+  border-radius: 0px;
+}
+.TimeLine .title {
+  margin-left: 15px;
+  font-size: 0.75em;
+  color: white !important;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.TimeLine .TimeLineBody {
+  text-align: center;
+}
+.arrowHeader {
+  right: -47px;
+  top: -11px;
+  z-index: 1;
+  font-size: 66px;
+  color: #fff;
+  position: absolute;
+}
+.TimeLineSelected {
+  position: absolute;
+  bottom: 0px;
+  background: #637485;
+  height: 4px;
+  width: 98%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 !important;
+  background: #fff;
+  /* border-radius: 5px; */
+  row-gap: 0px !important;
+  display: flex;
+  padding-top: 10px;
+}
+.filterSpace .description {
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  font-weight: bold;
+  color: #00417e;
+  /* color: rgb(147 147 147); */
+  padding: 1px 5px;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.filterSpace .actionsbutton {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -14px;
+  right: 10px;
+}
+.filterSpace {
+  grid-gap: 10px;
+  gap: 10px;
+  width: 100%;
+  display: inline-flex;
+  padding: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+  /* border-top: 2px solid #0e5291; */
+  margin-bottom: 15px;
+  margin-top: 5px;
+}

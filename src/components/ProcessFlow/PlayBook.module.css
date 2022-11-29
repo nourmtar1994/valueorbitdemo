@@ -1,0 +1,236 @@
+@media only screen and (max-width: 768px) {
+  .collapse :global(.collapse_body .question_value_manager),
+  .collapse :global(.collapse_body .question_value_sales),
+  .collapse :global(.collapse_body .question) {
+    width: 100% !important;
+  }
+
+  /* .collapse :global(.collapse_body .chat-box) {
+    width: 100% !important;
+    margin: 5px 0px;
+  } */
+  .collapse :global(.collapse_body .chat-box input) {
+    width: 100%;
+  }
+  .collapse :global(.collapse_body) {
+    display: block !important;
+  }
+}
+
+.collapse .panel {
+  border-bottom: 1px solid #00000013;
+  border-radius: 8px !important;
+  margin-bottom: 5px;
+}
+
+/* .collapse .panel:hover {
+  background: #00000008;
+} */
+
+.collapse .panel .panelTitle {
+  padding: 5px;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #024483b8 !important;
+  display: block;
+  width: 50%;
+}
+
+.userInfoMessage {
+  text-transform: capitalize;
+}
+.collapse :global(.ant-collapse-extra) {
+  width: 80%;
+}
+
+.collapse :global(.ant-collapse-header-text) {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.collapse :global(.collapse_body:hover .question_value_manager),
+.collapse :global(.pannel_header:hover .question_value_manager) {
+  opacity: 1;
+}
+
+.collapse :global(.pannel_header) {
+  display: flex;
+  width: 100%;
+  transition: 0.5s;
+  align-items: center;
+  justify-content: right;
+}
+.collapse :global(.collapse_body) {
+  width: 100%;
+  transition: 0.3s;
+  align-items: center;
+  padding: 0 5px 10px 5px;
+  justify-content: center;
+  border-radius: 5px;
+  border: 2px solid rgba(192, 192, 192, 0.4);
+  margin-bottom: 5px;
+}
+
+.collapse :global(.collapse_body::before) {
+  content: "";
+  width: 1px;
+  background-color: rgba(186, 186, 186, 0);
+  z-index: 2;
+  margin-right: 5px;
+}
+
+.collapse :global(.collapse_body:hover) {
+  border: 2px solid rgba(0, 65, 126, 0.687) !important;
+}
+
+.collapse :global(.ant-collapse-header) {
+  display: flex;
+  transition: 0.6s !important;
+}
+
+.collapse :global(.ant-collapse-header:hover .ant-collapse-header-text) {
+  transform: translateX(10px);
+}
+
+.collapse :global(.collapse_body .question),
+.collapse :global(.pannel_header .question) {
+  position: relative;
+  width: calc(100% - 30px);
+  border-radius: 5px;
+}
+
+.collapse :global(.collapse_body .question-item) {
+  margin-left: 10px;
+}
+
+.collapse :global(.collapse_body .question_value_sales),
+.collapse :global(.pannel_header .question_value_sales) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.collapse :global(.collapse_body .question_value_manager),
+.collapse :global(.pannel_header .question_value_manager) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 15%;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.collapse :global(.collapse_body .chat-box),
+.collapse :global(.pannel_header .chat-box) {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  min-height: 50px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 10;
+}
+
+.collapse :global(.collapse_body:hover .chat-box),
+.collapse :global(.pannel_header:hover .chat-box) {
+  opacity: 0.9;
+}
+
+.collapse :global(.collapse_body .icon),
+.collapse :global(.pannel_header .icon) {
+  font-size: 1.5em;
+  margin: 0 2px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.collapse :global(.collapse_body .icon-danger),
+.collapse :global(.pannel_header .icon-danger) {
+  color: #e71c18;
+}
+.collapse :global(.collapse_body .icon-warning),
+.collapse :global(.pannel_header .icon-warning) {
+  color: #fb8c00;
+}
+.collapse :global(.collapse_body .icon-success),
+.collapse :global(.pannel_header .icon-success) {
+  color: #15e41f;
+}
+
+.collapse :global(.collapse_body .icon-danger:hover),
+.collapse :global(.pannel_header .icon-danger:hover) {
+  color: #be4846;
+}
+.collapse :global(.collapse_body .icon-warning:hover),
+.collapse :global(.pannel_header .icon-warning:hover) {
+  color: #c77006;
+}
+.collapse :global(.collapse_body .icon-success:hover),
+.collapse :global(.pannel_header .icon-success:hover) {
+  color: #37983c;
+}
+
+.collapse :global(.collapse_body .icon-primary) {
+  font-size: 1.2em;
+  color: #00417e;
+}
+.collapse :global(.collapse_body .icon-primary:hover) {
+  color: #00417e;
+}
+
+.collapse :global(.collapse_body .icon-hide),
+.collapse :global(.pannel_header .icon-hide) {
+  display: none;
+}
+
+.collapse :global(.collapse_body .icon-selected),
+.collapse :global(.pannel_header .icon-selected) {
+  filter: contrast(0);
+}
+.collapse .status {
+  position: absolute;
+  right: -20px;
+  top: 0px;
+}
+.messageTime {
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+}
+.icon {
+  border-radius: 5px;
+  font-size: 1.3em;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.icon_danger {
+  color: #ef5350;
+}
+
+.icon_warning {
+  color: #fb8c00;
+}
+.icon_success {
+  color: #43a047;
+}
+
+.icon_primary {
+  font-size: 1.2em;
+  color: #00417e;
+}
+
+.icon_hide {
+  display: none;
+}
+
+.icon_selected {
+  filter: contrast(0);
+}

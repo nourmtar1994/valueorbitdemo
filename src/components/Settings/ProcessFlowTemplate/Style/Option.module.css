@@ -1,0 +1,60 @@
+.textEditableContainer {
+  display: flex;
+  align-items: center;
+}
+.textEditableContainer:hover {
+  border-right: 1px solid rgba(0, 0, 0, 0.241);
+}
+
+.textEditableContainer:hover .deleteButton {
+  display: block;
+}
+.deleteButton {
+  display: none;
+  transition-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.editButton,
+.saveButton,
+.cancelButton,
+.deleteButton {
+  border-radius: 1px;
+  outline: none;
+  padding: 0.1em;
+  min-width: 30px;
+  height: 100%;
+  border: none;
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  background: transparent;
+  transition: 0.3s;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.editButton:hover,
+.saveButton:hover,
+.cancelButton:hover,
+.deleteButton:hover {
+  background-color: rgba(0, 0, 0, 0.051);
+}
+
+.editButton {
+  font-size: 1.1em;
+
+  color: rgb(26, 115, 232);
+}
+.saveButton {
+  font-size: 1.1em;
+
+  color: rgb(11, 209, 21);
+}
+.cancelButton,
+.deleteButton {
+  font-size: 1.1em;
+  color: red;
+}
+.editContainer {
+  height: 30px;
+  display: flex;
+}

@@ -1,0 +1,13 @@
+.rowFields {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.rowFields .labelFileds {
+  width: 80%;
+}
+
+.rowFields .editIconFileds {
+  width: 20%;
+  text-align: right;
+}

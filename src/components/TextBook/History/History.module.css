@@ -1,0 +1,9 @@
+.historyContainer {
+  width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.historyContainer .ant-collapse-content-box {
+  padding: 0 !important;
+}

@@ -1,0 +1,112 @@
+/* #00417e 
+
+#fb8c00 
+
+#526079 */
+
+.container {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  min-height: 100px;
+  position: relative;
+  height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.header {
+  margin-left: 10px;
+}
+.header .subTitle {
+  position: relative;
+}
+
+.header .subTitle::after {
+  content: "";
+  width: 8px;
+  height: 24px;
+  /* background-color: #00417e; */
+  position: absolute;
+  top: -12px;
+  left: -10px;
+  border-left: 2px solid #cfdce9;
+  border-top: 2px solid #cfdce9;
+  border-bottom: 2px solid #cfdce9;
+}
+.topLoader {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.footer {
+  width: 100%;
+}
+
+.light {
+  border: 2px solid #f0f0f0;
+  color: rgb(29, 29, 29);
+}
+
+.dark {
+  background-color: #00417e;
+  border: 2px solid #f0f0f0;
+  color: rgb(255, 255, 255);
+}
+
+.container .mentionsInput textarea::placeholder {
+  color: rgb(145, 145, 145) !important;
+}
+.container .mentionsInput {
+  border-radius: 5px;
+  width: 100%;
+  /* background: #023260 !important; */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.container.light .mentionsInput textarea {
+  background-color: rgba(0, 0, 0, 0.04);
+
+  color: rgb(70, 70, 70);
+  border: none !important;
+  min-height: 50px;
+  height: 100%;
+  outline: none !important;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.container.dark .mentionsInput textarea {
+  background: #023260 !important;
+  color: white;
+  border: none !important;
+}
+
+.icon {
+  border-radius: 50%;
+  font-size: 1.3em;
+  cursor: help;
+  color: #4e4e4ea0;
+  width: 28px;
+  height: 28px;
+}
+.icon_danger {
+  color: #ff0500;
+}
+
+.icon_warning {
+  color: #fb8c00;
+}
+.icon_success {
+  color: #43a047;
+}
+
+.icon_primary {
+  color: #00417e;
+}
+
+.icon_secondary {
+  color: rgb(65, 65, 65);
+}

@@ -1,0 +1,132 @@
+.timeline {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.timelineItem {
+  background-color: #b1b1b112;
+  border: 1px dashed;
+  text-align: center;
+  height: 44px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 5px;
+}
+
+.title {
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700;
+  white-space: nowrap;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}
+
+.tag {
+  cursor: pointer;
+  color: rgb(140, 140, 140);
+  padding: 0;
+  font-size: 12.2px;
+  font-weight: 700;
+}
+
+.description {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description p {
+  margin: 0 30px;
+  color: rgb(157, 157, 157);
+  font-size: 12px;
+}
+
+.timelineItem.warning {
+  color: #ff9c07;
+  border-bottom: 2px solid #ff9c07;
+}
+.timelineItem.warning.active {
+  background: #ff9c0727;
+}
+
+.timelineItem.primary {
+  color: #00417e;
+  border-bottom: 2px solid #00417e;
+}
+.timelineItem.primary.active {
+  background-color: #4398e82b;
+}
+
+.timelineItem.success {
+  color: #43a048;
+  border-bottom: 2px solid #43a048;
+}
+
+.timelineItem.success.active {
+  background-color: #1bd62432;
+}
+
+.timelineItem.danger {
+  color: #e92630;
+  border-bottom: 2px solid #e92630;
+}
+.timelineItem.danger.active {
+  background-color: #f8747b2f;
+}
+
+.timelineItem.info {
+  color: #146a90;
+  border-bottom: 2px solid #146a90;
+}
+.timelineItem.info.active {
+  background-color: #146b9023;
+}
+.timelineItem.info {
+  color: #20a6df;
+  border-bottom: 2px solid #20a6df;
+}
+.timelineItem.info.active {
+  background-color: #20a6df27;
+}
+.timelineItem.purple {
+  color: #bf20df;
+  border-bottom: 2px solid #bf20df;
+}
+.timelineItem.purple.active {
+  background-color: #bf20df21;
+}
+
+.selectedItem {
+  position: absolute;
+  bottom: -5px;
+  background: #637485;
+  height: 4px;
+  width: 100%;
+}
+
+.warning {
+  color: #ff9c07;
+}
+
+.primary {
+  color: #00417e;
+}
+.success {
+  color: #52c41a;
+}
+.danger {
+  color: #e92630;
+}
+.info {
+  color: #146a90;
+}
+.purple {
+  color: #bf20df;
+}

@@ -1,0 +1,21 @@
+.actionsIcon {
+  font-size: 1.4em;
+  margin: 0 3px;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.actionsIcon:hover {
+  filter: brightness(0.3);
+}
+.actionsIcon.secondary {
+  color: #aaaaaa;
+}
+.actionsIcon.primary {
+  color: #00417ea8;
+}
+
+.actionsIcon.danger {
+  color: red;
+}

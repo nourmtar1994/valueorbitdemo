@@ -1,0 +1,390 @@
+import { MoreOutlined } from "@ant-design/icons";
+import { Button, Mentions, message, notification } from "antd";
+import axios from "axios";
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateOpportunityItem } from "../../../redux/Slices/Opportunity.slices";
+import Loader from "../../SmartProcessFlow/Loader/Loader";
+import * as classes from "./OpportunityTextBook.module.css";
+
+const { Option } = Mentions;
+
+const OpportunityTextBook = ({ setIsOpen }) => {
+  const opportunities = useSelector(
+    (state) => state.opportunity?.defaultList || []
+  );
+  const stagenameList = useSelector((state) => state.stages?.data || []);
+  const forecastCategoryList = useSelector(
+    (state) => state.forecastCategory?.data || []
+  );
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false);
+  const [value, setValue] = useState(null);
+  const [accountList, setAccountList] = useState([]);
+  const [selectedAccount, setSelectedAccount] = useState(null);
+  const [selectedOpportunity, setSelectedOpportunity] = useState(null);
+  const [fieldToUpdate, setFieldToUpdate] = useState();
+  const [FieldValue, setFieldValue] = useState("");
+  const [targetOpportunity, setTargetOpportunity] = useState([]);
+  const [guide, setGuide] = useState("account");
+
+  useEffect(() => {
+    setAccountList([...new Set(opportunities.map((item) => item.account))]);
+    console.log(accountList);
+  }, [opportunities]);
+
+  useEffect(() => {
+    setValue(value?.replace("||", "|@"));
+  }, [value]);
+
+  useEffect(() => {
+    if (selectedAccount) {
+      setTargetOpportunity(
+        opportunities?.filter(
+          (item) => item?.account?._id === selectedAccount?.id
+        )
+      );
+    }
+  }, [selectedAccount]);
+
+  const resetMentions = () => {
+    const arrayOfTags = value.split("|");
+    console.log(arrayOfTags);
+    setGuide("opportunity");
+    setSelectedOpportunity(null);
+    setFieldToUpdate(null);
+    setFieldValue(null);
+    setValue(arrayOfTags[0] + "|");
+  };
+
+  const onChange = (newvalue) => {
+    const arrayOfTags = newvalue.split("|");
+    setFieldValue(arrayOfTags[arrayOfTags?.length - 1]);
+    console.log(arrayOfTags);
+    if (
+      (newvalue === "" || newvalue === " " || newvalue === null) &&
+      selectedAccount
+    ) {
+      setGuide("account");
+      setValue("");
+      return;
+    } else {
+      setValue(newvalue);
+    }
+    if (arrayOfTags?.length === 1 && guide === "opportunity") {
+      setValue("@");
+      setGuide("account");
+      setSelectedAccount(null);
+      setSelectedOpportunity(null);
+      setFieldToUpdate(null);
+    }
+    if (arrayOfTags?.length === 2 && guide === "fields") {
+      setValue(arrayOfTags[0] + "|@");
+      setGuide("opportunity");
+      setSelectedOpportunity(null);
+      setFieldToUpdate(null);
+    }
+    if (
+      arrayOfTags?.length === 3 &&
+      (guide === "amount" ||
+        guide === "stagename" ||
+        guide === "forecastcategoryname" ||
+        guide === "nextstep" ||
+        guide === "closedate")
+    ) {
+      setValue(arrayOfTags[0] + "|" + arrayOfTags[1] + "|");
+      setFieldToUpdate(null);
+      setGuide("fields");
+    }
+  };
+  const onSelect = (option) => {
+    let data = JSON.parse(option?.key);
+    console.log(data);
+    if (data?.type === "account") {
+      setGuide("opportunity");
+      setSelectedAccount({
+        id: data?.accountID,
+        name: data?.name,
+      });
+    } else if (data?.type === "opportunity") {
+      setGuide("fields");
+      setSelectedOpportunity({
+        id: data?.oppoID,
+        name: data?.name,
+        values: data?.values,
+      });
+    } else if (
+      data?.type === "amount" ||
+      data?.type === "stagename" ||
+      data?.type === "forecastcategoryname" ||
+      data?.type === "nextstep" ||
+      data?.type === "closedate"
+    ) {
+      setGuide(data?.type);
+      setFieldToUpdate(data?.type);
+      console.log(data?.type);
+    } else if (data?.type === "updatevalue") {
+      updateOpportunity(data?.target, selectedOpportunity?.id, {
+        [data?.target]: data?.value,
+      });
+    }
+  };
+
+  const renderOptions = () => {
+    if (guide === "account") {
+      {
+        return accountList.map((item, index) => (
+          <Option
+            value={item?.name}
+            key={JSON.stringify({
+              key: index,
+              accountID: item?._id,
+              name: item?.name,
+              type: "account",
+            })}
+          >
+            <MoreOutlined
+              className={classes.icon + " " + classes.icon_success}
+            />
+            {item?.name}
+          </Option>
+        ));
+      }
+    } else if (guide === "opportunity") {
+      return targetOpportunity?.map((item, index) => (
+        <Option
+          value={item?.name}
+          key={JSON.stringify({
+            key: index,
+            oppoID: item?._id,
+            name: item?.name,
+            type: "opportunity",
+            values: item,
+          })}
+        >
+          <MoreOutlined className={classes.icon + " " + classes.icon_success} />
+          {item?.name}
+        </Option>
+      ));
+    } else if (guide === "fields") {
+      return (
+        <>
+          <Option
+            value={"amount"}
+            key={JSON.stringify({
+              key: 1,
+              type: "amount",
+            })}
+          >
+            Amount
+          </Option>
+          <Option
+            value={"stagename"}
+            key={JSON.stringify({
+              key: 2,
+              type: "stagename",
+            })}
+          >
+            Stage
+          </Option>
+          <Option
+            value={"forecastcategoryname"}
+            key={JSON.stringify({
+              key: 3,
+              type: "forecastcategoryname",
+            })}
+          >
+            Forecast Category
+          </Option>
+          <Option
+            value={"nextstep"}
+            key={JSON.stringify({
+              key: 4,
+              type: "nextstep",
+            })}
+          >
+            Next Step
+          </Option>
+          <Option
+            value={"closedate"}
+            key={JSON.stringify({
+              key: 5,
+              type: "closedate",
+            })}
+          >
+            Close Date
+          </Option>
+        </>
+      );
+    } else if (
+      guide === "amount" ||
+      guide === "nextstep" ||
+      guide === "closedate"
+    ) {
+      return (
+        <Option
+          value={FieldValue}
+          key={JSON.stringify({
+            key: "updatevalue",
+            type: "updatevalue",
+            value: FieldValue,
+            target: guide,
+          })}
+        >
+          <b> {fieldToUpdate} : </b> {FieldValue}
+        </Option>
+      );
+    } else if (guide === "stagename") {
+      return stagenameList?.map((item, index) => (
+        <Option
+          value={item?.apiname}
+          key={JSON.stringify({
+            key: "updatevalue",
+            type: "updatevalue",
+            value: item?.apiname,
+            target: guide,
+          })}
+        >
+          {item?.apiname}
+        </Option>
+      ));
+    } else if (guide === "forecastcategoryname") {
+      return forecastCategoryList?.map((item, index) => (
+        <Option
+          value={item?.name}
+          key={JSON.stringify({
+            key: "updatevalue",
+            type: "updatevalue",
+            value: item?.name,
+            target: guide,
+          })}
+        >
+          {item?.name}
+        </Option>
+      ));
+    }
+  };
+
+  const updateOpportunity = async (target = null, id, obj) => {
+    setLoading(true);
+    notification.destroy();
+    let route = null;
+
+    if (target === "stagename") {
+      route = "stagename";
+    } else if (target === "closedate") {
+      route = "closedate";
+    } else if (target === "amount") {
+      route = "amount";
+    } else if (target === "forecastcategoryname") {
+      route = "forecastcategoryname";
+    } else if (target === "nextstep") {
+      route = "nextstep";
+    } else if (target === "managerjudgment") {
+      route = "";
+    }
+    if (id && target) {
+      try {
+        const { data } = await axios.put(
+          "/opportunity/" + route + "/" + id,
+          obj
+        );
+        if (data?.success) {
+          message.success(Object.keys(obj)[0] + "updated");
+
+          dispatch(
+            updateOpportunityItem({
+              opportunityId: id,
+              target,
+              value: obj,
+            })
+          );
+
+          setSelectedOpportunity({
+            ...selectedOpportunity,
+            values: {
+              ...selectedOpportunity.values,
+              ...obj,
+            },
+          });
+
+          resetMentions();
+        }
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+
+        notification.error({
+          placement: "bottomRight",
+          message: "Deal cannot be updated ",
+          description: (
+            <>
+              <Button danger onClick={() => updateOpportunity(target, id, obj)}>
+                Retry
+              </Button>
+            </>
+          ),
+        });
+      }
+    }
+  };
+  return (
+    <div className={classes.container + " " + classes.light}>
+      {loading && <Loader />}
+      {selectedAccount && (
+        <>
+          <b>Account :</b> {selectedAccount?.name}
+          <br />
+        </>
+      )}
+      {selectedOpportunity && (
+        <>
+          <b>Opportunity : </b> {selectedOpportunity?.name}
+          <br />
+        </>
+      )}
+      {fieldToUpdate && (
+        <>
+          <b>{fieldToUpdate} : </b>{" "}
+          {selectedOpportunity?.values[fieldToUpdate] || null}
+        </>
+      )}
+      <Mentions
+        autoSize
+        placement="bottom"
+        notFoundContent={<b key={"not_found"}>No found tags</b>}
+        className={classes.mentionsInput}
+        rows={1}
+        // ref={MentionsRef}
+        // loading={loading}
+        style={{
+          fontSize: 16,
+          marginTop: 3,
+        }}
+        value={value}
+        onChange={onChange}
+        onSelect={onSelect}
+        placeholder={"Type @ to start playing"}
+        prefix={["@", "|"]}
+        split={"|"}
+      >
+        {renderOptions()}
+        {/* <Option
+        // key={JSON.stringify({
+        //   value: message,
+        //   itemId: Target?.question?._id,
+        //   type: "text",
+        //   isrequest: user?.role === "manager" ? true : false,
+        // })}
+        // value={message}
+        >
+          option
+        </Option> */}
+      </Mentions>
+    </div>
+  );
+};
+
+export default OpportunityTextBook;

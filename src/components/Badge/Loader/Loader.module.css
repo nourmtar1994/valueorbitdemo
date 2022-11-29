@@ -1,0 +1,14 @@
+.loadingContainer {
+  display: flex;
+  height: 150px;
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingContainer .loadingIcon {
+  font-size: 2em;
+  display: block;
+  color: rgb(0, 65, 126);
+}

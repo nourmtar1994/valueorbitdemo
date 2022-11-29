@@ -1,0 +1,27 @@
+{
+  "all": [
+    { "name": "goes_well_with", "operator": "contains", "value": "Eggnog" },
+    { "name": "expiration_days", "operator": "equal_to", "value": 0 },
+    { "name": "expiration_days", "operator": "equal_to", "value": 0 },
+    { "name": "expiration_days", "operator": "equal_to", "value": 0 },
+    {
+      "all": [
+        { "name": "expiration_days", "operator": "equal_to", "value": 0 },
+        {
+          "all": [
+            { "name": "expiration_days", "operator": "equal_to", "value": 0 },
+            {
+              "all": [
+                {
+                  "name": "expiration_days",
+                  "operator": "equal_to",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

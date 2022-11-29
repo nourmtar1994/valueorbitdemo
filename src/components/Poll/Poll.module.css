@@ -1,0 +1,56 @@
+.ant-drawer-content {
+  background-color: slategray !important;
+  text-align: center;
+}
+.icons {
+  width: 100%;
+  margin: auto;
+}
+
+.icons :global(.icon) {
+  font-size: 2.5em;
+  border-radius: 50%;
+  margin: 0 15px;
+  transition: 0.5s;
+}
+.icons :global(.option:hover .icon) {
+  transform: translateY(-10px);
+}
+.icons :global(.option) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: inline-grid;
+  cursor: pointer;
+}
+.icons :global(.option .text) {
+  font-size: 0.85em;
+  opacity: 0;
+  transition: 0.8s;
+  color: rgb(208, 208, 208);
+}
+
+.icons :global(.option:hover .text) {
+  opacity: 1;
+}
+.icons :global(.icon-primary) {
+  color: rgb(73, 163, 241);
+  box-shadow: 0 20px 22px -2px;
+}
+.icons :global(.icon-danger) {
+  color: #ef5350;
+  box-shadow: 0 20px 22px -2px #ef535090;
+}
+.icons :global(.icon-success) {
+  color: #43a047;
+  box-shadow: 0 20px 22px -2px #43a04790;
+}
+.icons :global(.icon-lemon) {
+  color: #a6e132;
+  box-shadow: 0 20px 22px -2px #a6e13290;
+}
+.icons :global(.icon-warning) {
+  color: #fb8c00;
+  box-shadow: 0 20px 22px -2px #fb8c0090;
+}

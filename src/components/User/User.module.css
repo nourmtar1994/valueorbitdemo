@@ -1,0 +1,6 @@
+.user_space {
+  width: 100%;
+  min-height: 100px;
+  height: fit-content;
+  background-color: transparent;
+}

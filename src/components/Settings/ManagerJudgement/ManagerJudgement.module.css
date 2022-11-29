@@ -1,0 +1,19 @@
+.rowFields {
+  display: flex;
+  align-items: center;
+  width: 105%;
+}
+.rowFields .labelFileds {
+  width: 80%;
+}
+
+.rowFields .editIconFileds {
+  opacity: 0.2;
+  width: 20%;
+  text-align: right;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.rowFields:hover .editIconFileds {
+  opacity: 1;
+}

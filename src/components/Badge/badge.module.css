@@ -1,0 +1,60 @@
+.card {
+  /* border: 2px solid #dce6f1; */
+  border-radius: 3px;
+  margin-bottom: 10px;
+  height: fit-content;
+  z-index: 1;
+}
+.card .ant-card-head {
+  background: #f0f2f5 !important;
+}
+.customBadge {
+  padding: 15px;
+  border-radius: 2px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+  z-index: 2;
+}
+.CardHeader {
+  display: flex;
+  align-items: center;
+}
+.CardHeader label {
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #536078;
+}
+.CardHeader .collapseButton {
+  padding-right: 15px;
+}
+.CardHeader .collapseIcon {
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.customWarningBadge {
+  background: linear-gradient(60deg, #ffa726, #fb8c00);
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%),
+    0 7px 10px -5px rgb(255 152 0 / 40%);
+}
+.customSuccessBadge {
+  background: linear-gradient(60deg, #66bb6a, #43a047);
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%),
+    0 7px 10px -5px rgb(76 175 80 / 40%);
+}
+
+.customDangerBadge {
+  background: linear-gradient(60deg, #ef5350, #e53935);
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%),
+    0 7px 10px -5px rgb(244 67 54 / 40%);
+}
+
+.customPrimaryBadge {
+  background: linear-gradient(60deg, #26c6da, #00acc1);
+  box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%),
+    0 7px 10px -5px rgb(0 172 193 / 40%);
+}

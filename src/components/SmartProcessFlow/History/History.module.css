@@ -1,0 +1,41 @@
+.historyContainer {
+  max-height: 500px;
+  overflow: auto;
+}
+.icon_danger {
+  color: #ef5350;
+}
+
+.icon_warning {
+  color: #fb8c00;
+}
+.icon_success {
+  color: #43a047;
+}
+
+.icon_primary {
+  font-size: 1.2em;
+  color: #00417e;
+}
+
+.icon_hide {
+  display: none;
+}
+
+.icon_selected {
+  filter: contrast(0);
+}
+.message {
+  width: 100%;
+  font-size: 13px;
+  margin: 3px 0;
+}
+.message:hover .dateMessage {
+  opacity: 1;
+}
+
+.dateMessage {
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0;
+}

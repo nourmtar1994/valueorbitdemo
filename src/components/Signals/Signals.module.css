@@ -1,0 +1,52 @@
+.signalsIcon {
+  font-size: 1.4em;
+  margin: 0 3px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.signalsIcon:hover {
+  filter: brightness(0.3);
+}
+.signalsIcon.secondary {
+  color: #aaaaaa;
+}
+.signalsIcon.primary {
+  color: #00417ea8;
+}
+
+.signalsIcon.danger {
+  color: red;
+}
+
+.categoryUpdateHeader {
+  padding: 5px 5px;
+  border-bottom: 1px solid #0000001d;
+  margin-bottom: 5px;
+  display: flex;
+}
+.closeIcon {
+  position: relative;
+  display: flex;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  width: 27px;
+  height: 27px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.closeIcon:hover {
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 1);
+}
+
+/* rgba(0, 0, 0, 0.75); */
+.title {
+  font-size: 18px;
+}

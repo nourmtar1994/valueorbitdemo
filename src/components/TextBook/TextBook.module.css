@@ -1,0 +1,29 @@
+.textEditor {
+  width: 100%;
+  display: inline-block;
+}
+.textEditor .collapseBtn {
+  position: fixed;
+  z-index: 2;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(255, 255, 255, 0.483);
+  color: #00417e;
+  border: 3px solid #00417e;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% 50% 2px 50%;
+  transition: 0.3s;
+  z-index: 10;
+
+  /* opacity: 0.7; */
+  cursor: pointer;
+}
+
+.textEditor .collapseBtn:hover {
+  background-color: #00417e;
+  color: white;
+}

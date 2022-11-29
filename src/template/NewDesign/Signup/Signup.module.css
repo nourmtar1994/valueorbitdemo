@@ -1,0 +1,74 @@
+@media only screen and (max-width: 730px) {
+  .cardcontainer .card {
+    display: block !important;
+  }
+  .cardcontainer .card .cardItem {
+    width: 80% !important;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.container {
+  background-image: url("../../../assets/images/vo_signup_background.svg");
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.cardcontainer {
+  border-radius: 15px;
+  height: fit-content;
+  width: 70%;
+  margin: auto;
+  background-color: #fff;
+  align-items: center;
+}
+.cardcontainer h3 {
+  margin-top: 20px;
+  color: #003d71;
+}
+.cardcontainer h2 {
+  margin-bottom: 20px;
+}
+
+.cardcontainer .card {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardcontainer .card .cardItem {
+  border-radius: 10px;
+  /* border: 1px solid #a6a6a68a; */
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  border: 2px solid rgba(235, 235, 235, 0.876);
+  width: calc(50% - 60px);
+  min-height: 150px;
+  padding: 15px 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cardcontainer .card .cardItem div {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 120px;
+}
+.cardcontainer .card .cardItem p {
+  font-weight: 600;
+  color: rgb(154, 154, 154);
+}
+.cardcontainer .card .cardItem:hover {
+  border: 2px solid #003c71ae;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.cardcontainer .footer {
+  margin-top: 70px;
+}
+.cardcontainer .footer p {
+  color: rgb(164, 164, 164);
+}

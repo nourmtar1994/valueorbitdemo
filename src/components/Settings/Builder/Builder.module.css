@@ -1,0 +1,65 @@
+.listContainer {
+  max-height: 75vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+.bulderListItem {
+  transition: 0.5s !important;
+  margin-top: 6px;
+  padding-left: 5px;
+  background-color: #00000004;
+  border-radius: 5px;
+  border-left: 2px solid #00417e00;
+
+  /* box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; */
+}
+.bulderListItem:hover {
+  background: #e9e9e9d1;
+}
+.selected {
+  border-left: 2px solid #00417e;
+}
+.rulesTitleHeader {
+  display: flex;
+}
+.rulesTitleHeader {
+  display: flex;
+}
+.rulesTitleHeader button {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+}
+.tagMessage {
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.inputTages {
+  height: 32px;
+  width: 100%;
+}
+.fieldsContainer {
+  transition: 0.5s !important;
+  padding: 15px 10px;
+  background-color: #00000004;
+  border-radius: 5px;
+  border-left: 2px solid #00417e00;
+}
+
+.fieldsContainer:hover {
+  background: #e9e9e9d1;
+}
+.fieldsContainer .fieldsLabel {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.editorengine {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #fff;
+}

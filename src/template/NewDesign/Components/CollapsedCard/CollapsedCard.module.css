@@ -1,0 +1,38 @@
+.collapseCard {
+  margin-bottom: 10px;
+}
+.collapseCard .header {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  min-height: 40px;
+  margin-bottom: 10px;
+}
+.collapseCard .header.bordred {
+  border: 2px solid #52607949;
+}
+.collapseCard .header h4 {
+  margin: 0 !important;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #526079;
+}
+.collapseCard .header .collapseIcon {
+  margin: 0 3px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.collapseCard .body {
+  transition: 0.3s;
+  border: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.collapseCard .options {
+  position: absolute;
+  right: 20px;
+}
