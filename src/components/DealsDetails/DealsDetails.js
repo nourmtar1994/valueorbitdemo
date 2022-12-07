@@ -541,6 +541,9 @@ const DealsDetails = ({ open }) => {
         if (data?.success) {
           message.success(Object.keys(obj)[0] + " updated");
         }
+        if (target === "stage") {
+          updateForeCast(id, obj?.stagename);
+        }
       } catch (error) {
         setUpdateLoading(false);
 
@@ -556,6 +559,38 @@ const DealsDetails = ({ open }) => {
           ),
         });
       }
+    }
+  };
+
+  const updateForeCast = async (id, stage) => {
+    let forecastCategory = null;
+    if (stage === "Negotiation/Review") {
+      forecastCategory = "Commit";
+    } else if (stage === "Closed Won") {
+      forecastCategory = "Closed";
+    } else if (stage === "Closed Lost") {
+      forecastCategory = "Omitted";
+    } else {
+      forecastCategory = "Pipeline";
+    }
+    try {
+      const updated = await axios?.put("/opportunity/" + id, {
+        forecastcategoryname: forecastCategory,
+      });
+
+      if (updated?.data?.success) {
+        dispatch(
+          updateOpportunityItem({
+            opportunityId: id,
+            target: "forecastcategory",
+            value: {
+              forecastcategoryname: forecastCategory,
+            },
+          })
+        );
+      }
+    } catch (error) {
+      message?.error("Forecast category not apdated");
     }
   };
 

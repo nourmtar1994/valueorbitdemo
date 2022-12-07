@@ -20,7 +20,9 @@ export const fetchAccounts = createAsyncThunk(
       return [];
     }
     try {
-      const res = await axios.get("/account/by/user/" + id).then((res) => res);
+      const res = await axios
+        .get("/account/by/" + user?.role + "/" + id)
+        .then((res) => res);
 
       return res.data;
     } catch (error) {

@@ -43,7 +43,7 @@ const DealsProgress = ({ open }) => {
     setData(newDataChart);
   }, [opportunities]);
   return (
-    <CollapsedCard open={open} title="Deals Progress">
+    <CollapsedCard open={open} title="Pipeline map">
       <Card>
         <Row gutter={[10, 30]}>
           <Col span={24}>

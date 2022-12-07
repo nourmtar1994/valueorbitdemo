@@ -60,7 +60,6 @@ const Predicitions = ({ setData, data, quarterData }) => {
 
   const updateOpportunity = async (target = null, id, obj) => {
     let route = null;
-
     if (target === "stage") {
       route = "stagename";
     } else if (target === "closedate") {
@@ -74,8 +73,6 @@ const Predicitions = ({ setData, data, quarterData }) => {
     } else if (target === "managerjudgment") {
       route = "";
     }
-    console.log(target);
-    console.log(route);
 
     if (id && route && target) {
       try {
@@ -92,6 +89,9 @@ const Predicitions = ({ setData, data, quarterData }) => {
               value: obj,
             })
           );
+          if (target === "stage") {
+            updateForeCast(id, obj?.stagename);
+          }
         }
       } catch (error) {
         console.log(error);
@@ -107,6 +107,36 @@ const Predicitions = ({ setData, data, quarterData }) => {
           ),
         });
       }
+    }
+  };
+
+  const updateForeCast = async (id, stage) => {
+    let forecastCategory = null;
+    if (stage === "Negotiation/Review") {
+      forecastCategory = "Commit";
+    } else if (stage === "Closed Won") {
+      forecastCategory = "Closed";
+    } else if (stage === "Closed Lost") {
+      forecastCategory = "Omitted";
+    } else {
+      forecastCategory = "Pipeline";
+    }
+    try {
+      const updated = await axios?.put("/opportunity/" + id, {
+        forecastcategoryname: forecastCategory,
+      });
+
+      if (updated?.data?.success) {
+        setData({
+          data: {
+            ...data,
+            forecastcategory: forecastCategory,
+            forecastcategoryname: forecastCategory,
+          },
+        });
+      }
+    } catch (error) {
+      message?.error("Forecast category not apdated");
     }
   };
 

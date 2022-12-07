@@ -12,9 +12,9 @@ const PipelineIntelligence = () => {
   return (
     <>
       <Filter opportunities={opportunities} opportunitiesForStages={[]} />
+      <RevenuePath />
       <DealsProgress open={true} />
       <PipelineProgress open={true} />
-      <RevenuePath />
       <DealsDetails />
     </>
   );

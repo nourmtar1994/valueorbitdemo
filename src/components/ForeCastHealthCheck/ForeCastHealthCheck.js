@@ -1201,51 +1201,43 @@ const ForeCastHealthCheck = ({ open }) => {
                   <Divider style={{ margin: 0 }} />
                 </Row>
 
-                {forecastChartData?.bestCase?.length > 0 ||
-                rollupChartData?.rollupBestCase?.length > 0 ||
-                aiChartData?.aibestCase?.length > 0 ||
-                repsChartData?.bestcaseReps?.length > 0 ||
-                forecastChartData?.target?.length > 0 ? (
-                  <LineCharts
-                    xTitle={quarterData?.month ? "Day" : "Month"}
-                    data={[
-                      {
-                        name: "Best Case",
-                        data:
-                          forecastChartData?.bestCase?.length > 0
-                            ? forecastChartData?.bestCase
-                            : [],
-                      },
-                      {
-                        name: user?.role === "sales" ? "Rollup" : "Reps",
-                        data:
-                          user?.role === "sales"
-                            ? rollupChartData?.rollupBestCase?.length > 0
-                              ? rollupChartData?.rollupBestCase
-                              : []
-                            : repsChartData?.bestcaseReps?.length > 0
-                            ? repsChartData?.bestcaseReps
-                            : [],
-                      },
-                      {
-                        name: "AI Best Case",
-                        data:
-                          aiChartData?.aibestCase?.length > 0
-                            ? aiChartData?.aibestCase
-                            : [],
-                      },
-                      {
-                        name: "Target",
-                        data:
-                          forecastChartData?.target?.length > 0
-                            ? forecastChartData?.target
-                            : [],
-                      },
-                    ]}
-                  />
-                ) : (
-                  <Alert message="No history" />
-                )}
+                <LineCharts
+                  xTitle={quarterData?.month ? "Day" : "Month"}
+                  data={[
+                    {
+                      name: "Best Case",
+                      data:
+                        forecastChartData?.bestCase?.length > 0
+                          ? forecastChartData?.bestCase
+                          : [],
+                    },
+                    {
+                      name: user?.role === "sales" ? "Rollup" : "Reps",
+                      data:
+                        user?.role === "sales"
+                          ? rollupChartData?.rollupBestCase?.length > 0
+                            ? rollupChartData?.rollupBestCase
+                            : []
+                          : repsChartData?.bestcaseReps?.length > 0
+                          ? repsChartData?.bestcaseReps
+                          : [],
+                    },
+                    {
+                      name: "AI Best Case",
+                      data:
+                        aiChartData?.aibestCase?.length > 0
+                          ? aiChartData?.aibestCase
+                          : [],
+                    },
+                    {
+                      name: "Target",
+                      data:
+                        forecastChartData?.target?.length > 0
+                          ? forecastChartData?.target
+                          : [],
+                    },
+                  ]}
+                />
               </div>
             }
           ></InfoCard>

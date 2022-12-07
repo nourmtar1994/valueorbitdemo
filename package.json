@@ -55,7 +55,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "set HTTPS=true&&set SSL_CRT_FILE=./.cert/valueorbit.crt&&set SSL_KEY_FILE=./.cert/private.key&& craco start",
+    "start": "HTTPS=true SSL_CRT_FILE=./.cert/valueorbit.crt SSL_KEY_FILE=./.cert/private.key craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject"

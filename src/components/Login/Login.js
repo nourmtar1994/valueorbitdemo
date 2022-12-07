@@ -43,8 +43,6 @@ const Login = () => {
         password: values.password,
       });
 
-      console.log(data);
-
       if (data?.success) {
         let user = {
           id: data?.data?._id,
@@ -52,7 +50,7 @@ const Login = () => {
           firstname: data?.data?.firstname,
           lastname: data?.data?.lastname,
           originId: data?.data?.idorigin,
-          role: data?.data?.role,
+          role: data?.role,
         };
         Cookies.set(
           "VO_USER_AUTH",

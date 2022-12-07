@@ -24,7 +24,9 @@ export const fetchOpportunity = createAsyncThunk(
         : "";
 
     try {
-      const res = await axios.get("/opportunity/user/" + id).then((res) => res);
+      const res = await axios
+        .get("/opportunity/" + user?.role + "/" + id)
+        .then((res) => res);
 
       return res.data;
     } catch (error) {
